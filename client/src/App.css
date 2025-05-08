@@ -1,0 +1,509 @@
+a {
+  text-decoration: none;
+}
+a:link {
+  color: rgb(255, 200, 0);
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+.login {
+  align-items: center;
+  justify-content: center;
+}
+.div-form {
+  border-style: solid;
+  border-width: thin;
+  font-size: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background-color: rgb(252, 252, 252);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border-color: #a6d49f;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login-form input {
+  margin: 2px;
+}
+.smalltext {
+  font-size: 14px;
+  font-weight: bold;
+  color: #522a27;
+}
+
+.columndiv1 {
+  border-color: #a6d49f;
+  font-size: xx-large;
+  background-color: rgb(252, 252, 252);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.columndiv2 {
+  border-color: rgb(182, 179, 176);
+  font-size: xx-large;
+  height: auto;
+  padding: 20px;
+  /*   background-image: url("http://localhost:3000/image1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.loginImage {
+  height: 100%;
+  width: 100%;
+}
+.appTitle {
+  text-align: center;
+  color: #c73e1d;
+}
+.formrow {
+  background-color: #f5f3ef
+  ;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side {
+  display: flex;
+  vertical-align: top;
+}
+.checkbox {
+  width: 25px;
+  height: 25px;
+}
+.button {
+  background-color: #8b5e3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #5c4033;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 10;
+  margin-left: 10px;
+}
+
+.navigation {
+  background-color: #5c4033;
+  height: 75px;
+  font-weight: bolder;
+  color: #522a27;
+}
+.register-btn {
+  background-color: #8b5e3c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #5c4033;
+}
+.profileCard {
+  border: 1px solid #ddd; /* Border around the card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding inside the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  text-align: center; /* Center align text */
+  max-width: 300px; /* Maximum width of the card */
+  margin: 20px auto; /* Center the card on the page */
+  background-color: #fff; /* Background color */
+}
+
+.userImage {
+  border: 2px solid #0b0f14; /* Border around the image */
+  border-radius: 50%; /* Circular image */
+  padding: 5px; /* Space between image and border */
+  width: 100px; /* Image width */
+  height: 100px; /* Image height */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.footer {
+  display: flex;
+  background-color: #e4e9ca;
+  height: 100px;
+  color: #7a3608;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  flex-shrink: 0;
+  border-top: 1px solid #bcaea4;
+}
+.socialmedia {
+  width: 100px;
+  height: 100px;
+}
+
+.userImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.userInfos {
+  padding: 20px;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  min-height: 300px;
+}
+.sharePosts {
+  padding-top: 10px;
+  height: 200px;
+  border-style: solid;
+  border-width: thin;
+  margin-top: 10px;
+  border-color: #a6d49f;
+  text-align: center;
+}
+.inputPost {
+  margin-right: 10px;
+  width: 80%;
+  border-color: #522a27;
+}
+.input-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.postButton {
+  background-color: #522a27;
+}
+.dept {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.selectDept .selectDept {
+  width: 10%;
+}
+.postUserImage {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.postsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+  width: 100%;
+}
+.postMsg {
+  padding: 20px;
+
+  border: 1px solid rgb(244, 241, 241);
+}
+.postedBy {
+  padding: 10px;
+  background-color: rgb(236, 238, 236);
+  border-radius: 10px;
+}
+.postByName {
+  font-weight: bolder;
+  font: optional;
+}
+.postDate {
+  margin-left: 5px;
+}
+.navs {
+  padding: 10px;
+}
+.userName {
+  font-weight: bold;
+}
+.likes {
+  padding: 5px;
+}
+
+.error {
+  color: red;
+  font-size: small;
+}
+.header {
+  display: flex;
+  background-color: #e4e9ca;
+  height: 80px;
+  color: #7a3608;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  flex-shrink: 0;
+  border-top: 1px solid #bcaea4;
+}
+
+.nav {
+  display: flex;
+  align-items: center; /* Vertically align items */
+}
+
+.logo {
+  height: 50px; /* Adjust the logo size as needed */
+}
+
+.nav a {
+  text-decoration: none; /* Remove underline */
+  color: #000; /* Set text color */
+  margin: 0 15px; /* Add spacing between links */
+}
+
+.nav a:hover {
+  color: #05192f; /* Change color on hover (optional) */
+}
+.welcome-container {
+  background-image: url('https://cdn.wallpapersafari.com/82/24/y0l7UD.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.welcome-content {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+}
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('https://img.freepik.com/premium-vector/education-book-study-library-school-illustration-vector-knowledge-read-design-reading-boo_1013341-684179.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.div-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color:  #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0b2a4b;
+}
+/* Apply background color or image for the entire page */
+.home-page {
+  background: url('https://img.freepik.com/premium-vector/education-book-study-library-school-illustration-vector-knowledge-read-design-reading-boo_1013341-684179.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover;
+  padding: 20px 0;
+  min-height: 100vh;
+  color: #020202; /* White text for better contrast */
+}
+
+/* Style for cards */
+.card {
+  background-color: rgba(213, 174, 174, 0.232); /* Semi-transparent background for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Style for the header */
+h2.mb-3 {
+  font-size: 2.5rem;
+  color: #7a3608; /* Tomato color */
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.custom-heading {
+  color: #7a3608;
+  font-weight: bold;
+}
+
+
+/* Buttons */
+button {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0a0909;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button.secondary {
+  background-color: #0a0909;
+}
+
+button.primary {
+  background-color: #0a0909;
+}
+
+/* Styling the footer or bottom */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #0a0909;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Rating stars */
+.star-rating span {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.star-rating span:hover {
+  color: gold;
+}
+
+/* Additional layout adjustments */
+.d-flex.justify-content-between {
+  margin-bottom: 30px;
+}
+
+.mb-4 {
+  margin-bottom: 40px;  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  margin-bottom: 20px;
+}
+
+.card-text {
+  margin-top: 5px;
+}
+/* AddBook.css */
+
+/* .auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom right, #f1f4f9, #dff1ff);
+  padding: 2rem;
+}
+
+.div-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.div-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.div-form input,
+.div-form select {
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.div-form .error {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+
+.div-form .button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.div-form .button:hover {
+  background-color: #0056b3;
+} */
+.alert-success {
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+
+
