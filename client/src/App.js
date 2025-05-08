@@ -11,7 +11,6 @@ import Login from "./Components/Login";
 import WelcomePage from './Components/WelcomePage';
 import { useSelector } from "react-redux";
 import AddBook from "./Components/AddBook";
-import FindLibraries from "./Components/FindLibraries";
 
 const App = () => {
   const { user } = useSelector((state) => state.users);
@@ -31,7 +30,6 @@ const App = () => {
   <Route path="/login" element={<Login />} />
   <Route path="/add-book"  element={<AddBook />} />
   <Route path="/edit-book/:id" element={<AddBook />} />
-  {/* <Route path="/find-libraries" element={<FindLibraries />} /> */}
 
 
 
