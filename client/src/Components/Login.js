@@ -13,7 +13,7 @@ import { login } from "../Features/UsersSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const { user, isLogin } = useSelector((state) => state.users);
+  const { user, isLogin , msg} = useSelector((state) => state.users);
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
@@ -40,7 +40,7 @@ const Login = () => {
   useEffect(() => {
     if (isLogin) navigate("/home");
     else navigate("/login");
-  }, [isLogin, user, navigate]);
+  }, [isLogin, user,msg, navigate]);
 
   return (
     <div className="auth-wrapper">

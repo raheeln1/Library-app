@@ -21,7 +21,7 @@ const Header = () => {
         <Nav>
           <NavItem>
             <Link>
-              <img src={bookslogo} className="logo" alt=""/>
+              <img src={bookslogo} className="logo" alt="bookslogo"/>
             </Link>
           </NavItem>
           <NavItem>

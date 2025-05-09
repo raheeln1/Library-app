@@ -31,8 +31,6 @@ const App = () => {
   <Route path="/add-book"  element={<AddBook />} />
   <Route path="/edit-book/:id" element={<AddBook />} />
 
-
-
 </Routes>
         </Row>
         <Row>

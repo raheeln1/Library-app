@@ -13,7 +13,7 @@ const Profile = () => {
       <h6>User Id: {user?._id}</h6>
       <h6>Date: {user?.createdAt}</h6>
       <h6>lastLogin: {user?.lastLogin}</h6>
-      < Location />
+      <Location/>
 
     </div>
   );

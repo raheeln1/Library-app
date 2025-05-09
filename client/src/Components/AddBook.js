@@ -40,8 +40,7 @@ const AddBook = () => {
     reset(); 
     setSuccessMessage(" Book added successfully!");
     setTimeout(() => setSuccessMessage(""), 3000);
-
-  };
+  }
 
   return (
     <div className="auth-wrapper">
