@@ -37,7 +37,7 @@ export const login = createAsyncThunk(
       return {user,msg}; //return the response from the server as payload to the thunk
     } catch (error) {
       
-      const msg = error.response?.data?.msg
+      const msg = error.response.data.msg;
       return rejectWithValue({ msg })
       
     }
