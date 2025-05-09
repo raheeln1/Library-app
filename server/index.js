@@ -7,7 +7,10 @@ import dotenv from "dotenv";
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3001",
+  credentials: true,
+}));
 dotenv.config();
 
 const constr = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@personallibrary.zf5mldr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=PersonalLibrary`;
