@@ -14,14 +14,16 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { books } = useSelector((state) => state.books);
+  // const { books } = useSelector((state) => state.books);
+  const { books } = useSelector((state) => state.books || { books: [] }); // إضافة fallback
+
   const { user } = useSelector((state) => state.users);
 
 
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
-
+  
   const totalBooks = books.length;
   const readBooks = books.filter((book) => book.status === "read").length;
   const readingBooks = books.filter((book) => book.status === "reading").length;
