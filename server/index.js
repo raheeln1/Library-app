@@ -7,14 +7,7 @@ import dotenv from "dotenv";
 
 const app = express();
 app.use(express.json());
-const corsOptions = {
-  origin: "http://localhost:3000",  // أضف هنا الـ URL الخاص بالتطبيق المحلي
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true,               // إذا كنت تستخدمين الكوكيز أو الجلسات
-  allowedHeaders: ["Content-Type", "Authorization"]  // تأكدي من إضافة "Authorization" إذا كنت تستخدمين الـ Tokens
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 dotenv.config();
 
 const constr = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@personallibrary.zf5mldr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=PersonalLibrary`;
