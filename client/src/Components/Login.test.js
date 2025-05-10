@@ -6,19 +6,19 @@ import { screen,render } from "@testing-library/react";
 
 describe("check my component element", ()=>{
     it("test user name",()=>{
-        render(<MyComponent />)
+        render(<Login />)
         const element = screen.getByTestId("e1")
             expect(element).toBeInTheDocument();
         
     })
     it("test user password",()=>{
-        render(<MyComponent />)
+        render(<Login />)
         const element = screen.getByTestId("e2")
             expect(element).toBeInTheDocument();
         
     })
     it("test user button",()=>{
-        render(<MyComponent />)
+        render(<Login />)
         const element = screen.getByTestId("e3")
             expect(element).toBeInTheDocument();
         
