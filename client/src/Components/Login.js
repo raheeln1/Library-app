@@ -53,6 +53,7 @@ const Login = () => {
                 <p className="text-center fs-3">Login</p>
                 <div className="form-group">
                   <input
+                  data-testid='e1'
                     type="text"
                     className="form-control"
                     id="email"
@@ -65,6 +66,7 @@ const Login = () => {
                 </div>
                 <div className="form-group">
                   <input
+                  data-testid='e2'
                     type="password"
                     className="form-control"
                     id="password"
@@ -80,8 +82,8 @@ const Login = () => {
                 </button>
               </section>
               <div className="mt-1">
-                You don't have an account?{" "}
-                <Link to="/register" onSubmit={handleSubmit}>Sign Up</Link>
+                You don't have an account?
+                <Link to="/register" data-testid='e3' onSubmit={handleSubmit}>Sign Up</Link>
               </div>
             </form>
           </Col>

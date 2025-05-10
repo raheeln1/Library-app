@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../Features/UsersSlice";
-
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,7 +20,7 @@ const Header = () => {
         <Nav>
           <NavItem>
             <Link>
-              <img src={bookslogo} className="logo" alt="bookslogo"/>
+            <img src={bookslogo} className="logo" alt="bookslogo" />
             </Link>
           </NavItem>
           <NavItem>

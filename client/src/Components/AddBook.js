@@ -59,6 +59,7 @@ const AddBook = () => {
 
                 <div className="form-group">
                   <input
+                   role = "title"
                     type="text"
                     className="form-control"
                     id="title"
@@ -72,6 +73,7 @@ const AddBook = () => {
 
                 <div className="form-group">
                   <input
+                   role = "author"
                     type="text"
                     className="form-control"
                     id="author"
