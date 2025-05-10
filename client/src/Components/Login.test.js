@@ -1,9 +1,6 @@
 import Login from "./Login";
 import { screen,render } from "@testing-library/react";
 
-import MyComponent from "./MyComponent";
-import { screen,render } from "@testing-library/react";
-
 describe("check my component element", ()=>{
     it("test user name",()=>{
         render(<Login />)
