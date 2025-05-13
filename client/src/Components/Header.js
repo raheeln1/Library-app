@@ -24,14 +24,17 @@ const Header = () => {
             </Link>
           </NavItem>
           <NavItem>
-            <Link to="/home">Home</Link>
+            <Link to="/home" >Home</Link>
           </NavItem>
           <NavItem>
             <Link to="/profile">Profile</Link>
           </NavItem>
-          <NavItem>
-          <Link onClick={handleLogout}>Logout</Link>
-          </NavItem>
+         <NavItem>
+  <button onClick={handleLogout} className="nav-link btn btn-link">
+    Logout
+  </button>
+</NavItem>
+
          
           {/* <NavItem>
         <Link to="/find-libraries">Find Nearby Libraries

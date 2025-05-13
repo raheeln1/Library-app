@@ -47,7 +47,7 @@ const Login = () => {
       <Container>
         <Row className="justify-content-center">
           <Col lg="6">
-            <form className="div-form" onSubmit={(onSubmit)}>
+           <form className="div-form" onSubmit={(onSubmit)}>
               <section>
                 <p>Welcome to My Librarie Book</p>
                 <p className="text-center fs-3">Login</p>
@@ -77,13 +77,14 @@ const Login = () => {
                   />
                   <p className="error">{errors.password?.message}</p>
                 </div>
-                <button type="submit" className="button">
-                  Sign In
-                </button>
+               <button type="submit" className="button" data-testid="e3">
+  Sign In
+</button>
+
               </section>
               <div className="mt-1">
                 You don't have an account?
-                <Link to="/register" data-testid='e3' onSubmit={handleSubmit}>Sign Up</Link>
+                <Link to="/register" onSubmit={handleSubmit}>Sign Up</Link>
               </div>
             </form>
           </Col>

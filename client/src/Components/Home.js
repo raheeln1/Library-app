@@ -15,7 +15,7 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 const Home = () => {
   const dispatch = useDispatch();
   // const { books } = useSelector((state) => state.books);
-  const { books } = useSelector((state) => state.books || { books: [] }); // إضافة fallback
+  const { books } = useSelector((state) => state.books || { books: [] }); 
 
   const { user } = useSelector((state) => state.users);
 

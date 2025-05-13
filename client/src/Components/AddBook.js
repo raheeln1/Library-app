@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {  Row, Col, Container } from "reactstrap";
 import { useForm } from "react-hook-form";
@@ -59,7 +59,7 @@ const AddBook = () => {
 
                 <div className="form-group">
                   <input
-                   role = "title"
+                    data-testid="e1"
                     type="text"
                     className="form-control"
                     id="title"
@@ -73,8 +73,8 @@ const AddBook = () => {
 
                 <div className="form-group">
                   <input
-                   role = "author"
-                    type="text"
+                  data-testid="e2"
+                     type="text"
                     className="form-control"
                     id="author"
                     placeholder="Enter author..."
@@ -87,6 +87,7 @@ const AddBook = () => {
 
                 <div className="form-group">
                   <input
+                 
                     type="text"
                     className="form-control"
                     id="category"
@@ -113,7 +114,7 @@ const AddBook = () => {
                   <p className="error text-danger">{errors.status?.message}</p>
                 </div>
 
-                <button type="submit" className="button btn btn-primary w-100">
+                <button type="submit"  data-testid="e3" className="button btn btn-primary w-100">
                   Add Book
                 </button>
               </section>

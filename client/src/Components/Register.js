@@ -24,14 +24,14 @@ const Register = () => {
   //For form validation using react-hook-form
   const {
     register,
-    handleSubmit, // Submit the form when this is called
+    handleSubmit, 
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(userSchemaValidation), //Associate your Yup validation schema using the resolver
+    resolver: yupResolver(userSchemaValidation), 
   });
 
-  const dispatch = useDispatch(); //every time we want to call an action, make an action happen
-  const navigate = useNavigate(); //declares a constant variable named navigate and assigns it the value returned by the useNavigate() hook
+  const dispatch = useDispatch(); 
+  const navigate = useNavigate(); 
 
   // Handle form submission
   const onSubmit = (data) => {
