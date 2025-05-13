@@ -7,11 +7,7 @@ import dotenv from "dotenv";
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-  origin: ["http://localhost:3000", "https://library-app-gtyn.onrender.com"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
+app.use(cors());
 dotenv.config();
 
 const constr = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@personallibrary.zf5mldr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=PersonalLibrary`;
@@ -28,21 +24,24 @@ app.post("/registerUser", async (req, res) => {
   }
 });
 
-app.post("/login", async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const user = await UsersModel.findOne({ email });
+app.post("/login",async(req,res)=>{
+     try{
+        const{email,password} =req.body
+        const user = await UserModel.findOne({email: email})
+        if(!user){
+           res.status(500).json({msg:"Could not find the User"})
+        }
+        else if(user.password !== password){
+           res.status(500).json({msg:"Password is incorrect"})
+        }
+        else{
+          res.status(200).json({user: user, msg:"Login Successful"})
+        }  
+     }
+     catch(error){
+        res.status(500).json({msg:"Unexpected error occurred"})
+     }
 
-    if (!user) {
-      return res.status(404).json({ msg: "User not found" });
-    } else if (user.password !== password) {
-      return res.status(401).json({ msg: "Incorrect password" });
-    } else {
-      return res.status(200).json({ user, msg: "Login successful" });
-    }
-  } catch (error) {
-    res.status(500).json({ error: "An unexpected error occurred" });
-  }
 });
 
 
