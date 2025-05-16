@@ -43,6 +43,9 @@ export const login = createAsyncThunk(
     }
   }
 );
+
+
+//////
 export const logout = createAsyncThunk("users/logout", async () => {
   try {
     // Send a request to your server to log the user out
@@ -105,6 +108,8 @@ export const usersSlice = createSlice({
     .addCase(logout.rejected, (state,action) => {
       state.status =  "rejected";
     })
+
+
   }
 });
 

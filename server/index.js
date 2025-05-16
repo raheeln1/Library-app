@@ -26,26 +26,28 @@ app.post("/registerUser", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   try {
-    console.log("Login request body:", req.body);
     const { email, password } = req.body;
+    console.log("Login request received:", email, password); // ← أضيفي هذا
+
     if (!email || !password) {
       return res.status(400).json({ msg: "Email and password are required" });
     }
-    const user = await UsersModel.findOne({ email: email });
-    console.log("Found user:", user);
+
+    const user = await UsersModel.findOne({ email });
+
     if (!user) {
       return res.status(404).json({ msg: "User not found" });
-    }
-    if (user.password !== password) {
+    } else if (user.password !== password) {
       return res.status(401).json({ msg: "Password is incorrect" });
     }
-    res.status(200).json({ user: user, msg: "Login Successful" });
+
+    res.status(200).json({ user, msg: "Login Successful" });
+
   } catch (error) {
     console.error("Login error:", error);
     res.status(500).json({ msg: "Unexpected error occurred" });
   }
 });
-
 
 app.post("/logout", (req, res) => {
   res.status(200).json({ msg: "Logged out successfully" });
@@ -135,6 +137,23 @@ app.delete('/listbooks/:id', async (req, res) => {
     res.status(200).json({ message: 'Book deleted successfully' });
   } catch (error) {
     res.status(500).json({ message: 'Error deleting book' });
+  }
+});
+app.put('/listbooks/:id/status', async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+  console.log("Received update for ID:", id, "New status:", status); // ← هذا يساعد
+
+  try {
+    const updatedBook = await BookModel.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true }
+    );
+    res.json(updatedBook);
+  } catch (error) {
+    console.error("Update status error:", error);
+    res.status(500).json({ msg: "Failed to update status" });
   }
 });
 

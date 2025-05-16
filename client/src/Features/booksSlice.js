@@ -35,6 +35,18 @@ export const createBook = createAsyncThunk(
   }
 );
 
+export const updateBookStatus = createAsyncThunk(
+  "books/updateBookStatus",
+  async ({ bookId, newStatus }) => {
+    const response = await axios.put(
+      `${process.env.REACT_APP_SERVER_URL}/listbooks/${bookId}/status`,
+      { status: newStatus }
+    );
+    return response.data;
+  }
+);
+//////
+
 
 
  export const booksSlice = createSlice({
@@ -76,7 +88,14 @@ export const createBook = createAsyncThunk(
       .addCase(createBook.fulfilled, (state, action) => {
         state.status = 'BOOK IS ADDED';
         state.books.push(action.payload);
-      });
+      })
+          .addCase(updateBookStatus.fulfilled, (state, action) => {
+  const updatedBook = action.payload;
+  const index = state.books.findIndex((book) => book._id === updatedBook._id);
+  if (index !== -1) {
+    state.books[index] = updatedBook;
+  }
+})
       
       
       

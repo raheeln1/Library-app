@@ -11,7 +11,7 @@ import {
   fetchBooks,deleteBook, updateBookRating,
 } from "../Features/booksSlice";
 import { FaStar, FaRegStar } from "react-icons/fa";
-
+import {updateBookStatus} from '../Features/booksSlice'
 const Home = () => {
   const dispatch = useDispatch();
   // const { books } = useSelector((state) => state.books);
@@ -39,6 +39,7 @@ const Home = () => {
       dispatch(deleteBook(bookId));
     }
   };
+ 
 
   
   return (
@@ -91,7 +92,23 @@ const Home = () => {
                 <Card>
                   <CardBody>
                     <CardTitle tag="h6">{book.title}</CardTitle>
-                    <CardText>Status: {book.status}</CardText>
+                   <CardText>
+  Status:
+  <select
+    value={book.status}
+    onChange={(e) =>
+      dispatch(
+        updateBookStatus({ bookId: book._id, newStatus: e.target.value })
+      )
+    }
+    className="ms-2"
+  >
+    <option value="wantToRead">Want to Read</option>
+    <option value="reading">Reading</option>
+    <option value="read">Read</option>
+  </select>
+</CardText>
+
                     <CardText>Author: {book.author}</CardText>
 
                     <CardText>
