@@ -24,24 +24,26 @@ app.post("/registerUser", async (req, res) => {
   }
 });
 
-app.post("/login",async(req,res)=>{
-     try{
-        const{email,password} =req.body
-        const user = await UserModel.findOne({email: email})
-        if(!user){
-           res.status(500).json({msg:"Could not find the User"})
-        }
-        else if(user.password !== password){
-           res.status(500).json({msg:"Password is incorrect"})
-        }
-        else{
-          res.status(200).json({user: user, msg:"Login Successful"})
-        }  
-     }
-     catch(error){
-        res.status(500).json({msg:"Unexpected error occurred"})
-     }
-
+app.post("/login", async (req, res) => {
+  try {
+    console.log("Login request body:", req.body);
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({ msg: "Email and password are required" });
+    }
+    const user = await UsersModel.findOne({ email: email });
+    console.log("Found user:", user);
+    if (!user) {
+      return res.status(404).json({ msg: "User not found" });
+    }
+    if (user.password !== password) {
+      return res.status(401).json({ msg: "Password is incorrect" });
+    }
+    res.status(200).json({ user: user, msg: "Login Successful" });
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).json({ msg: "Unexpected error occurred" });
+  }
 });
 
 
